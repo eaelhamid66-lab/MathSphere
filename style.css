@@ -1,0 +1,712 @@
+/* ================= RESET ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+height:100%;
+font-family:"Segoe UI", Arial, sans-serif;
+background:#f4f7fb;
+overflow-x:hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+color:white;
+}
+
+
+nav a{
+color:white;
+font-weight:600;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:600;
+font-size:20px;
+}
+
+/* تحسين اللوجو بدون تغيير HTML */
+.logo img{
+width:45px;
+border-radius:12px;
+background:white;
+padding:5px;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#6c63ff;
+}
+
+.navbar{
+position:absolute;
+width:100%;
+top:0;
+left:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 8%;
+background:transparent;
+z-index:3;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+position:relative;
+height:100vh;
+
+background:url("hero-background.png") center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:white;
+overflow:hidden;
+}
+
+/* طبقة تغميق */
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.65);
+top:0;
+left:0;
+}
+
+/* توزيع العناصر */
+.hero-content{
+position:relative;
+z-index:2;
+
+width:85%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:60px;
+line-height:1.2;
+}
+
+.hero-text span{
+color:#ff7b00;
+}
+
+.hero-text p{
+margin:25px 0;
+opacity:.9;
+font-size:18px;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:6px;
+background:#ff7b00;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(255,123,0,.4);
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image{
+z-index:2;
+}
+
+.hero-image img{
+width:420px;
+max-width:100%;
+filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));
+}
+
+
+/* ================= FLOATING SYMBOLS ================= */
+
+/* نجعل الصور تبدو عناصر تصميم */
+.floating{
+position:absolute;
+width:55px;
+opacity:.12;             /* أهم تعديل */
+filter:brightness(2);
+pointer-events:none;
+
+animation:float 8s infinite ease-in-out;
+}
+
+/* توزيع احترافي */
+.f1{
+top:15%;
+left:8%;
+animation-delay:0s;
+}
+
+.f2{
+top:60%;
+right:10%;
+animation-delay:2s;
+}
+
+.f3{
+bottom:12%;
+left:45%;
+animation-delay:4s;
+}
+
+
+/* حركة احترافية */
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+}
+50%{
+transform:translateY(-25px) rotate(8deg);
+}
+100%{
+transform:translateY(0) rotate(0deg);
+}
+}
+
+/* ================= LOGIN CARD ================= */
+
+.login-card{
+width:300px;
+background:#111;
+padding:35px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,.5);
+text-align:center;
+}
+
+.login-card h3{
+background:white;
+color:#ff7b00;
+padding:10px;
+border-radius:6px;
+margin-bottom:20px;
+}
+
+.login-card input{
+width:100%;
+margin:10px 0;
+padding:12px;
+background:transparent;
+border:none;
+border-bottom:1px solid #555;
+color:white;
+outline:none;
+}
+
+.login-btn{
+width:100%;
+margin-top:15px;
+background:#ff7b00;
+}
+
+.signup{
+margin-top:15px;
+font-size:14px;
+}
+
+.signup a{
+color:#ff7b00;
+text-decoration:none;
+}
+
+.divider{
+width:85%;
+height:1px;
+margin:60px auto;
+
+background:linear-gradient(
+to right,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+}
+
+.unit3{
+padding:80px 40px;}
+
+/* خلفية هادئة متداخلة */
+body{
+margin:0;
+font-family:Segoe UI;
+color:white;
+background:
+linear-gradient(135deg,#141e30,#243b55);
+min-height:100vh;
+overflow-x:hidden;
+}
+
+
+.lessons-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.lesson-card{
+background:white;
+padding:30px;
+border-radius:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.08);
+
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+/* تأثير 3D */
+.lesson-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:
+0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* شكل ثلاثي الأبعاد خفيف */
+.lesson-card::before{
+content:"";
+position:absolute;
+width:120px;
+height:120px;
+background:linear-gradient(45deg,#6c8cff,#aab6ff);
+border-radius:50%;
+top:-40px;
+right:-40px;
+opacity:.2;
+}
+
+body::before,
+body::after{
+content:"";
+position:fixed;
+width:400px;
+height:400px;
+border-radius:50%;
+filter:blur(120px);
+z-index:-1;
+}
+
+body::before{
+background:#4facfe;
+top:-100px;
+left:-100px;
+}
+
+body::after{
+background:#00f2fe;
+bottom:-120px;
+right:-120px;
+}
+
+
+.lessons-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:60px;
+}
+
+.lesson-card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.lesson-card:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+.lessons-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:60px;
+}
+
+.lesson-card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.lesson-card:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+
+/* Lesson Page Design */
+
+.lesson-page{
+max-width:900px;
+margin:80px auto;
+padding:40px;
+border-radius:20px;
+background:rgba(20,25,40,0.85);
+backdrop-filter:blur(12px);
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+line-height:1.8;
+}
+
+.lesson-page h1{
+font-size:38px;
+margin-bottom:25px;
+color:#4facfe;
+}
+
+.lesson-page h2{
+margin-top:35px;
+color:#00f2fe;
+}
+
+.lesson-page p{
+font-size:18px;
+color:#e6e6e6;
+}
+
+.lesson-page ul{
+margin-top:10px;
+padding-left:20px;
+}
+
+.lesson-page li{
+margin-bottom:8px;
+}
+
+
+.lesson-bg::before,
+.lesson-bg::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+filter:blur(140px);
+z-index:-1;
+}
+
+.lesson-bg::before{
+background:#3a7bd5;
+top:-120px;
+left:-120px;
+}
+
+.lesson-bg::after{
+background:#00d2ff;
+bottom:-150px;
+right:-150px;
+}
+
+
+/* ================= EXERCISES PAGE ================= */
+
+.exercise-hero{
+min-height:100vh;
+padding:80px;
+background:
+radial-gradient(circle at 20% 30%,#27304a,#141824),
+radial-gradient(circle at 80% 70%,#1c2235,#0d101a);
+color:white;
+}
+
+.exercise-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.exercise-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+font-size:22px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.exercise-card:hover{
+transform:translateY(-10px);
+background:#6c63ff;
+}
+
+
+.questions-container{
+padding:80px;
+background:
+linear-gradient(135deg,#121523,#1f2740);
+min-height:100vh;
+color:white;
+}
+
+.question-card{
+background:rgba(255,255,255,.05);
+padding:30px;
+margin:20px 0;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+.answer-btn{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#6c63ff;
+color:white;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+
+.answer-btn:hover{
+transform:scale(1.05);
+}
+
+.answer{
+margin-top:15px;
+color:#00ffb3;
+font-weight:bold;
+}
+
+.pagination{
+margin-top:40px;
+text-align:center;
+}
+
+
+/* FORMULAS */
+
+.formulas-container{
+padding:40px;
+text-align:center;
+}
+
+.formula-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.formula-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.formula-card:hover{
+transform:translateY(-8px);
+}
+
+.formula-card h2{
+color:#1e2433;
+}
+
+.formula-card button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:#1e2433;
+color:white;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.formula-card button.active{
+background:#4CAF50;
+}
+
+.law{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+opacity:0;
+transform:translateY(10px);
+transition:0.4s;
+}
+
+.law.show{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* ================= FORMULAS ================= */
+
+.formulas-container{
+min-height:100vh;
+padding:80px;
+background:
+radial-gradient(circle at 20% 30%,#1b2336,#0c1220),
+radial-gradient(circle at 80% 70%,#111827,#05070f);
+color:white;
+}
+
+/* GRID */
+.formula-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+/* CARD */
+.formula-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 15px 45px rgba(0,0,0,.6);
+transition:.4s;
+color:white;
+}
+
+.formula-card:hover{
+transform:translateY(-8px);
+}
+
+/* TITLES */
+.formula-card h2{
+color:#ffffff;
+font-weight:600;
+}
+
+/* DESCRIPTION */
+.formula-card p{
+color:#cfd8ff;
+margin:10px 0 20px;
+}
+
+/* BUTTON */
+.formula-card button{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#20263a;
+color:white;
+cursor:pointer;
+transition:.3s;
+font-weight:600;
+}
+
+.formula-card button:hover{
+background:#6c63ff;
+}
+
+.formula-card button.active{
+background:#00c896;
+}
+
+/* FORMULA TEXT */
+.law{
+margin-top:20px;
+font-size:24px;
+font-weight:bold;
+color:#00ffb3;
+
+opacity:0;
+transform:translateY(15px);
+transition:.4s;
+}
+
+/* SHOW ANIMATION */
+.law.show{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* ===== TOOLS INPUTS ===== */
+
+.tool-input{
+width:80%;
+padding:12px;
+margin:8px 0;
+border-radius:10px;
+border:none;
+outline:none;
+text-align:center;
+}
+
+.result{
+margin-top:15px;
+font-size:22px;
+color:#00ffb3;
+font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

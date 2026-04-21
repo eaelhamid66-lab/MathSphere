@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Login - Math Sphere</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+<div class="login-container">
+
+<h1>Welcome to Math Sphere</h1>
+<p class="subtitle">Login to continue your learning journey</p>
+
+<div class="login-box">
+
+<input id="username" type="text" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<button type="button" onclick="loginUser()">Login</button>
+
+</div>
+
+</div>
+
+<script src="login.js"></script>
+
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const username =
+        document.querySelector("input[type=text]").value;
+
+    const password =
+        document.querySelector("input[type=password]").value;
+
+    if(username && password){
+
+        // حفظ المستخدم
+        localStorage.setItem("mathsphereUser", username);
+
+        // الانتقال للصفحة الرئيسية
+        window.location.href="index.html";
+    }
+
+});
+</script>
+
+
+</body>
+</html>
+
+
